@@ -14,18 +14,6 @@ from dotenv import load_dotenv
 from pyrogram import Client, enums
 from asyncio import get_event_loop
 
-main_loop = get_event_loop()
-
-faulthandler_enable()
-
-setdefaulttimeout(600)
-
-botStartTime = time()
-
-basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    handlers=[FileHandler('log.txt'), StreamHandler()],
-                    level=INFO)
-
 LOGGER = getLogger(__name__)
 
 load_dotenv('config.env', override=True)
